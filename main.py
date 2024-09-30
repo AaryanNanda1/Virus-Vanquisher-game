@@ -38,11 +38,12 @@ Deathpic2 = image.load("Dead2.png")
 Viruspicture = image.load("ComputerVirusImage.png")
 Viruspic = transform.scale(Viruspicture, (20, 20))
 VirsuWarninigpicture = image.load("RocketWarning.png")
-VirsuWarninigpic = transform.scale(VirsuWarninigpicture, (30, 30))
+VirsuWarninigpic = transform.scale(VirsuWarninigpicture, (40, 40))
 Backgroundpic = image.load("MatrixBackground.png")
-GameOverpic = image.load("GameOver.png")
+GameOverpicture= image.load("GameOver.png")
+GameOverpic= transform.scale(GameOverpicture, (250, 250))
 Controlspicture = image.load("Controls.png")
-Controlspic = transform.scale(Controlspicture, (700, 550))
+Controlspic = transform.scale(Controlspicture, (850, 600))
 GameNamepic = image.load("GameTittle.png")
 
 # Functions
@@ -145,7 +146,7 @@ def DrawBackground(screen):
 # Draws 'Game Over' graphic and player score information
 def DrawGameOver(screen, Score, HighScore):
     # 'Game Over' graphic
-    GameOver = (250, 150, GameOverpic.get_width(), GameOverpic.get_height())
+    GameOver = (265, 130, GameOverpic.get_width(), GameOverpic.get_height())
     screen.blit(GameOverpic, GameOver)
     # Checks for new highscore
     if Score > HighScore:
@@ -173,7 +174,7 @@ def DrawMenu(screen, button, mx, my, state, HighScore): # /// Used code form Cre
   for i in range(len(rectList)):
     rect = rectList[i] # get the current Rect
     draw.rect(screen, GREEN, rect)  # draw the Rect
-    text = menuFont.render(titleList[i] , 1, BLACK)	# make the font`
+    text = menuFont.render(titleList[i] , 1, BLACK)	# make the font
     textWidth, textHeight = menuFont.size(titleList[i]) # get the font size
     useW = (blockWidth - textWidth)//2  #use for centering
     useH = (blockHeight - textHeight)//2
@@ -193,7 +194,7 @@ def DrawMenu(screen, button, mx, my, state, HighScore): # /// Used code form Cre
     screen.blit(Score, (Circle))
 
     # Displays Game Name
-    GameName = (250, 10, GameNamepic.get_width(), GameNamepic.get_height())
+    GameName = (25, 8, GameNamepic.get_width(), GameNamepic.get_height())
     screen.blit(GameNamepic, GameName)
     
     if rect.collidepoint(mx, my):
@@ -206,7 +207,7 @@ def DrawMenu(screen, button, mx, my, state, HighScore): # /// Used code form Cre
 def DrawControls(screen, button, mx, my, state):
   screen.fill(BLACK)
   # Displays image with game controls
-  Controls = (50, 10, Controlspic.get_width(), Controlspic.get_height())
+  Controls = (10, -30, Controlspic.get_width(), Controlspic.get_height())
   screen.blit(Controlspic, Controls)
 
   # Code for back to menu button
