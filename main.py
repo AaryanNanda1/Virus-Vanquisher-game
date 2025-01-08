@@ -161,7 +161,7 @@ def DrawGameOver(screen, Score, HighScore):
     screen.blit(text, (240, 335, 50, 50))
 
 # Function to draw main menue
-def DrawMenu(screen, button, mx, my, state, HighScore): # /// Used code form Creating a Menu, on google doc file: Example Game Code Reference ///
+def DrawMenu(screen, button, mx, my, state, HighScore):
   blockWidth = width//3
   blockHeight = height//7    
   rectList = [Rect(blockWidth - 150, blockHeight, blockWidth, blockHeight), # game choice
