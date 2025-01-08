@@ -75,7 +75,7 @@ def DrawFlying(screen, y):
     return HitBox
 
 # Draws stationary Laser
-def DrawLaser(screen):  # Draws numerous stationary laser obstacles /// Used code form Multiple Missiles in a List, on google doc file: Example Game Code Reference ///
+def DrawLaser(screen):  # Draws numerous stationary laser obstacles
     global LaserListX, LaserListY, LaserTime, ScrollSpeed
     Obstacles = []
     for i in range(len(LaserListX) - 1, -1, -1):
