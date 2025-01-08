@@ -104,7 +104,7 @@ def DrawLaser(screen):  # Draws numerous stationary laser obstacles /// Used cod
     return Obstacles
 
 # Draws moving Missile
-def DrawMissile(screen):  # Draws numerous moving missile obstacles /// Used code form Multiple Missiles in a List, on google doc file: Example Game Code Reference ///
+def DrawMissile(screen):  # Draws numerous moving missile obstacles
     global MissileListX, MissileListY, MissileTime
     Obstacles2 = []  # VR - always start empty, that's how we had so many
     for i in range(len(MissileListX) - 1, -1, -1):
